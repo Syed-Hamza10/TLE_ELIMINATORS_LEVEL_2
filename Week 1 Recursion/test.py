@@ -1,24 +1,16 @@
-import sys
-sys.setrecursionlimit(int(1e5))
+def isPrime():
+    should_continue = True
 
-def main():
-    r,c = map(int, input().strip().split())
-    print(r)
-    print(c)
-    mat1 = []
-    mat2 = []
-    res = [[0 for _ in range(c)] for _ in range(r)]
+    num = int(input())
+    i = 1
+    count = 0
+    while should_continue:
+        if num % i == 0 :
+            return False
+        elif num % i == 0 and count == 2:
+            count +=1            
+        i += 1
+    return True
 
-    for i in range(r):
-        mat1.append(list(map(int, input().strip().split())))
 
-    for i in range(r):
-        mat2.append(list(map(int, input().strip().split())))
-
-    # dfs(0, 0, mat1, mat2, res)
-    for row in res:
-        for e in row:
-            print(e, end=" ")
-        print()
-
-main()
+print(isPrime())

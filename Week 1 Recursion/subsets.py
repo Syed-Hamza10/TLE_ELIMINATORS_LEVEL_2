@@ -24,4 +24,4 @@ def subsets(numbers):
     dfs(0)
     return res
 
-print(subsets([1,2,2]))
+print(subsets([1,2,3]))
